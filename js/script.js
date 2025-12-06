@@ -407,7 +407,7 @@ function loadCalendly() {
                     <p style="color: var(--text-muted); font-size: var(--font-small); margin-bottom: var(--space-lg);">
                         Please contact us directly to schedule your consultation:
                     </p>
-                    <a href="mailto:abdelalissa78@gmail.com" style="display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                    <a href="mailto:support@synoriya.info" style="display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
                         📧 Email Us
                     </a>
                 </div>
