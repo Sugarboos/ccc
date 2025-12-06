@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/cookie-consent.css">
     <link rel="stylesheet" href="css/hero-fullwidth.css">
+    <link rel="stylesheet" href="css/audio-demo.css">
     <!-- Removed hero-animation.css as we are using iframe now -->
 
     <!-- Structured Data -->
@@ -319,6 +320,67 @@
 
                 </section>
 
+                <!-- AUDIO DEMO SECTION -->
+                <section class="container" style="margin-bottom: var(--space-2xl);">
+                    <div class="audio-demo-section">
+                        <h2 class="subheadline" style="margin-bottom: 20px;">Experience the Future</h2>
+                        <h3 class="headline" style="font-size: 36px; margin-bottom: 40px;">Hear Synoriya in Action 🎧
+                        </h3>
+
+                        <div class="player-card">
+                            <!-- Top Controls -->
+                            <div class="player-header">
+                                <button class="play-button-large">
+                                    <svg class="play-icon" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" style="fill: white;" />
+                                    </svg>
+                                </button>
+                                <div style="font-size: 14px; color: #666;">
+                                    <span style="color: #FF5722;">●</span> Live Recording
+                                </div>
+                            </div>
+
+                            <!-- Main Visual -->
+                            <div class="player-visuals">
+                                <div class="speaker-tags">
+                                    <div class="speaker-tag ai">
+                                        <span>✨ Synoriya AI</span>
+                                    </div>
+                                    <div class="speaker-tag user">
+                                        <span>👤 Caller</span>
+                                    </div>
+                                </div>
+                                <!-- Placeholder visual with dark gradient -->
+                                <div
+                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a1b3d, #121212); display: flex; align-items: center; justify-content: center;">
+                                    <div class="play-overlay">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress -->
+                            <div class="progress-bar-container">
+                                <span>0:00</span>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>1:45</span>
+                            </div>
+                        </div>
+
+                        <!-- Tabs -->
+                        <div class="demo-tabs">
+                            <div class="demo-tab active">Home Services</div>
+                            <div class="demo-tab">Dental Clinic</div>
+                            <div class="demo-tab">Law Firm</div>
+                            <div class="demo-tab">Real Estate</div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Future: Add real trust indicators/case studies here -->
 
             </div>
@@ -418,6 +480,7 @@
 
     <!-- Essential Scripts -->
     <script src="js/script.js"></script>
+    <script src="js/audio-demo.js"></script>
     <script src="js/cookie-consent.js"></script>
     <script src="js/test-cookie.js"></script>
 
