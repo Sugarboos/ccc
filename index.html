@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="css/cookie-consent.css">
     <link rel="stylesheet" href="css/hero-fullwidth.css">
     <link rel="stylesheet" href="css/audio-demo.css">
+    <link rel="stylesheet" href="css/value-prop.css">
+    <link rel="stylesheet" href="css/lead-capture.css">
     <!-- Removed hero-animation.css as we are using iframe now -->
 
     <!-- Structured Data -->
@@ -83,27 +85,10 @@
         </button>
 
         <div class="nav-center">
-            <!-- Products Dropdown -->
-            <div class="nav-dropdown">
-                <button class="nav-link dropdown-toggle" aria-expanded="false" aria-label="Products menu">
-                    Products
-                    <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
-                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-section">
-                        <a href="#" class="dropdown-item">
-                            <strong>AI Receptionist</strong>
-                            <span>AI-first answering, intake & scheduling</span>
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            <strong>Virtual Receptionists</strong>
-                            <span>Human-first answering, intake & scheduling</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- Why Us -->
+            <a href="why-us/" class="nav-link" aria-label="Why Us page">
+                Why Us
+            </a>
 
             <!-- Who We Serve Dropdown -->
             <div class="nav-dropdown">
@@ -211,18 +196,11 @@
         <div class="mobile-menu-overlay">
             <div class="mobile-menu">
                 <div class="mobile-menu-content">
-                    <!-- Products -->
+                    <!-- Why Us -->
                     <div class="mobile-menu-item">
-                        <button class="mobile-menu-link">
-                            Products
-                            <svg class="mobile-dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
-                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </button>
-                        <div class="mobile-submenu">
-                            <a href="#" class="mobile-submenu-item">AI Receptionist</a>
-                            <a href="#" class="mobile-submenu-item">Virtual Receptionists</a>
-                        </div>
+                        <a href="why-us/" class="mobile-menu-link">
+                            Why Us
+                        </a>
                     </div>
 
                     <!-- Who We Serve -->
@@ -378,80 +356,69 @@
                             <div class="demo-tab">Law Firm</div>
                             <div class="demo-tab">Real Estate</div>
                         </div>
+                        <div class="progress-indicator" role="progressbar" aria-label="Quiz progress" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="5">
+                            <div class="progress-dot active" data-step="0"></div>
+                            <div class="progress-dot" data-step="1"></div>
+                            <div class="progress-dot" data-step="2"></div>
+                            <div class="progress-dot" data-step="3"></div>
+                            <div class="progress-dot" data-step="4"></div>
+                        </div>
+
+                        <!-- Quiz Content -->
+                        <div class="quiz-content">
+                            <h2 class="quiz-intro">Let's create a personalized automation strategy for YOUR business!
+                            </h2>
+                            <div id="question-container" role="region" aria-live="polite" aria-atomic="true">
+                                <!-- Questions will be dynamically inserted here -->
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-                <!-- Future: Add real trust indicators/case studies here -->
-
             </div>
-        </div>
 
-        <!-- Quiz Screen -->
-        <div id="quiz-screen" class="screen">
-            <div class="container">
-                <!-- Progress Indicator -->
-                <div class="progress-indicator" role="progressbar" aria-label="Quiz progress" aria-valuenow="0"
-                    aria-valuemin="0" aria-valuemax="5">
-                    <div class="progress-dot active" data-step="0"></div>
-                    <div class="progress-dot" data-step="1"></div>
-                    <div class="progress-dot" data-step="2"></div>
-                    <div class="progress-dot" data-step="3"></div>
-                    <div class="progress-dot" data-step="4"></div>
-                </div>
+            <!-- Booking Screen -->
+            <div id="booking-screen" class="screen">
+                <div class="container">
+                    <div class="booking-content">
+                        <div class="success-icon">🚀</div>
+                        <h2 class="booking-headline">Perfect! Let's Get You Automated</h2>
+                        <p class="booking-subheadline">Based on your answers, I can show you exactly how to <span
+                                class="highlight" id="personalized-benefit">transform your business</span> with Synoriya
+                            automation.
+                        </p>
 
-                <!-- Quiz Content -->
-                <div class="quiz-content">
-                    <h2 class="quiz-intro">Let's create a personalized automation strategy for YOUR business!</h2>
-                    <div id="question-container" role="region" aria-live="polite" aria-atomic="true">
-                        <!-- Questions will be dynamically inserted here -->
+                        <div class="booking-benefits">
+                            <div class="benefit-item">
+                                <span class="check-icon">✓</span>
+                                <span>30-minute personalized demo</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="check-icon">✓</span>
+                                <span>Custom automation strategy for your business</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="check-icon">✓</span>
+                                <span>See real examples & results</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="check-icon">✓</span>
+                                <span>No commitment required</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-cta">
+                            <p class="booking-prompt">Book your free Zoom call now:</p>
+                            <!-- Calendly inline widget begin -->
+                            <div id="booking-embed">
+                                <!-- Calendly widget will be loaded here after consent -->
+                            </div>
+                            <!-- Calendly inline widget end -->
+                        </div>
+
+                        <p class="booking-footer">We respect your time. No sales pitch, just value.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking Screen -->
-        <div id="booking-screen" class="screen">
-            <div class="container">
-                <div class="booking-content">
-                    <div class="success-icon">🚀</div>
-                    <h2 class="booking-headline">Perfect! Let's Get You Automated</h2>
-                    <p class="booking-subheadline">Based on your answers, I can show you exactly how to <span
-                            class="highlight" id="personalized-benefit">transform your business</span> with Synoriya
-                        automation.
-                    </p>
-
-                    <div class="booking-benefits">
-                        <div class="benefit-item">
-                            <span class="check-icon">✓</span>
-                            <span>30-minute personalized demo</span>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="check-icon">✓</span>
-                            <span>Custom automation strategy for your business</span>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="check-icon">✓</span>
-                            <span>See real examples & results</span>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="check-icon">✓</span>
-                            <span>No commitment required</span>
-                        </div>
-                    </div>
-
-                    <div class="booking-cta">
-                        <p class="booking-prompt">Book your free Zoom call now:</p>
-                        <!-- Calendly inline widget begin -->
-                        <div id="booking-embed">
-                            <!-- Calendly widget will be loaded here after consent -->
-                        </div>
-                        <!-- Calendly inline widget end -->
-                    </div>
-
-                    <p class="booking-footer">We respect your time. No sales pitch, just value.</p>
                 </div>
             </div>
-        </div>
     </main>
 
     <!-- Footer -->

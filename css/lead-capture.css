@@ -1,0 +1,71 @@
+/* Component: Lead Capture Form */
+.lead-capture-section {
+    padding: 100px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, #130820 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lead-capture-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.capture-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.capture-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 20px;
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.capture-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.capture-button {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    padding: 0 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.capture-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.privacy-note {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+@media (max-width: 640px) {
+    .capture-form {
+        flex-direction: column;
+    }
+
+    .capture-button {
+        padding: 16px;
+        width: 100%;
+    }
+}

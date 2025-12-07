@@ -1,0 +1,119 @@
+/* Component: Comparison Section (Human vs AI) */
+.comparison-section {
+    padding: var(--space-2xl) 5%;
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 60px auto 0;
+    position: relative;
+}
+
+/* VS Badge in the center */
+.vs-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--text-muted);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.comparison-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: transform 0.3s ease;
+}
+
+.comparison-card.bad {
+    border-top: 4px solid #ef4444; /* Red for 'The Old Way' */
+}
+
+.comparison-card.good {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-top: 4px solid #a855f7; /* Purple for Synoriya */
+    box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.15);
+    transform: scale(1.05); /* Slight lift for emphasis */
+    z-index: 1;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-icon {
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.bad .feature-icon { color: #ef4444; }
+.good .feature-icon { color: #10b981; }
+
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .vs-badge {
+        top: 46%; /* Adjusted for stacked layout */
+    }
+    
+    .comparison-card.good {
+        transform: scale(1);
+    }
+}
